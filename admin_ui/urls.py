@@ -25,6 +25,7 @@ urlpatterns = [
     path('prompt-templates/', views.prompt_templates, name='prompt_templates'),
     path('prompt-templates/<int:template_id>/', views.prompt_template_detail, name='prompt_template_detail'),
     path('prompt-templates/create/', views.prompt_template_create, name='prompt_template_create'),
+    path('prompt-templates/<int:template_id>/edit/', views.prompt_template_edit, name='prompt_template_edit'), # Added edit URL
     
     # Messages
     path('messages/', views.messages, name='messages'),

@@ -4,11 +4,13 @@ from django.contrib.auth.views import LoginView
 from django.utils import timezone
 from django.db.models import Count
 from datetime import timedelta
+from django.contrib import messages as django_messages # Renamed to avoid conflict
 
 from core.models import ErrorLog, SystemConfig
 from message_receiver.models import MessageSource, Message
 from api_connector.models import APIConfiguration, APIEndpoint
 from openai_processor.models import PromptTemplate, FunctionCallLog
+from openai_processor.forms import PromptTemplateForm # Import the form
 
 
 class AdminUILoginView(LoginView):
@@ -170,9 +172,42 @@ def prompt_template_detail(request, template_id):
 @login_required
 def prompt_template_create(request):
     """Create a new prompt template"""
-    # This is a placeholder for now
-    # In a real implementation, this would handle form submission
-    return render(request, 'admin_ui/prompt_templates/create.html')
+    if request.method == 'POST':
+        form = PromptTemplateForm(request.POST)
+        if form.is_valid():
+            template = form.save()
+            django_messages.success(request, f"Prompt template '{template.name}' created successfully.")
+            return redirect('admin_ui:prompt_template_detail', template_id=template.id)
+    else:
+        form = PromptTemplateForm()
+    
+    context = {
+        'form': form,
+        'form_title': 'Create New Prompt Template'
+    }
+    return render(request, 'admin_ui/prompt_templates/form.html', context) # Use a generic form template
+
+
+@login_required
+def prompt_template_edit(request, template_id):
+    """Edit an existing prompt template"""
+    template = get_object_or_404(PromptTemplate, id=template_id)
+    
+    if request.method == 'POST':
+        form = PromptTemplateForm(request.POST, instance=template)
+        if form.is_valid():
+            form.save()
+            django_messages.success(request, f"Prompt template '{template.name}' updated successfully.")
+            return redirect('admin_ui:prompt_template_detail', template_id=template.id)
+    else:
+        form = PromptTemplateForm(instance=template)
+        
+    context = {
+        'form': form,
+        'template': template,
+        'form_title': f'Edit Prompt Template: {template.name}'
+    }
+    return render(request, 'admin_ui/prompt_templates/form.html', context) # Reuse the generic form template
 
 
 @login_required
