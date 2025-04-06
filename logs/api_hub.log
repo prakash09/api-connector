@@ -495,3 +495,473 @@ INFO 2025-04-06 21:02:22,359 basehttp "GET /api-connections/ HTTP/1.1" 200 12153
 INFO 2025-04-06 21:02:22,367 basehttp "GET /static/css/dist/styles.css?v=1743973342 HTTP/1.1" 200 34658
 INFO 2025-04-06 21:02:23,159 basehttp "GET /messages/ HTTP/1.1" 200 11396
 INFO 2025-04-06 21:02:23,170 basehttp "GET /static/css/dist/styles.css?v=1743973343 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:06:33,682 autoreload Watching for file changes with StatReloader
+INFO 2025-04-06 21:06:37,672 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:06:37,685 basehttp "GET /static/css/dist/styles.css?v=1743973597 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:06:39,655 basehttp "GET /message-sources/ HTTP/1.1" 200 12967
+INFO 2025-04-06 21:06:39,663 basehttp "GET /static/css/dist/styles.css?v=1743973599 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:06:41,137 basehttp "GET /message-sources/1/ HTTP/1.1" 200 12765
+INFO 2025-04-06 21:06:41,147 basehttp "GET /static/css/dist/styles.css?v=1743973601 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:06:42,611 basehttp "GET /message-sources/1/edit/ HTTP/1.1" 200 15228
+INFO 2025-04-06 21:06:42,621 basehttp "GET /static/css/dist/styles.css?v=1743973602 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:06:57,230 basehttp "GET /message-sources/1/edit/ HTTP/1.1" 200 15228
+INFO 2025-04-06 21:06:57,238 basehttp "GET /static/css/dist/styles.css?v=1743973617 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:06:57,240 basehttp "GET /static/admin_ui/css/custom.css HTTP/1.1" 304 0
+INFO 2025-04-06 21:06:57,241 basehttp "GET /static/admin_ui/js/main.js HTTP/1.1" 304 0
+INFO 2025-04-06 21:06:57,577 basehttp "GET /messages/ HTTP/1.1" 200 11396
+INFO 2025-04-06 21:06:58,328 basehttp "GET /prompt-templates/ HTTP/1.1" 200 12654
+INFO 2025-04-06 21:06:58,336 basehttp "GET /static/css/dist/styles.css?v=1743973618 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:07:00,373 basehttp "GET /prompt-templates/2/ HTTP/1.1" 200 13110
+INFO 2025-04-06 21:07:00,383 basehttp "GET /static/css/dist/styles.css?v=1743973620 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:07:04,975 basehttp "GET /api-connections/ HTTP/1.1" 200 12153
+INFO 2025-04-06 21:07:04,990 basehttp "GET /static/css/dist/styles.css?v=1743973624 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:07:06,351 basehttp "GET /message-sources/ HTTP/1.1" 200 12967
+INFO 2025-04-06 21:07:06,360 basehttp "GET /static/css/dist/styles.css?v=1743973626 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:07:08,267 basehttp "GET /message-sources/2/ HTTP/1.1" 200 12704
+INFO 2025-04-06 21:07:08,278 basehttp "GET /static/css/dist/styles.css?v=1743973628 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:07:13,468 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:07:13,477 basehttp "GET /static/css/dist/styles.css?v=1743973633 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:07:15,781 basehttp "GET /message-sources/ HTTP/1.1" 200 12967
+INFO 2025-04-06 21:07:15,792 basehttp "GET /static/css/dist/styles.css?v=1743973635 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:07:18,270 basehttp "GET /message-sources/2/ HTTP/1.1" 200 12704
+INFO 2025-04-06 21:07:18,281 basehttp "GET /static/css/dist/styles.css?v=1743973638 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:07:19,122 basehttp "GET /message-sources/2/edit/ HTTP/1.1" 200 15115
+INFO 2025-04-06 21:07:19,132 basehttp "GET /static/css/dist/styles.css?v=1743973639 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:07:29,735 basehttp "GET /prompt-templates/ HTTP/1.1" 200 12654
+INFO 2025-04-06 21:07:29,747 basehttp "GET /static/css/dist/styles.css?v=1743973649 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:07:30,819 basehttp "GET /messages/ HTTP/1.1" 200 11396
+INFO 2025-04-06 21:07:30,826 basehttp "GET /static/css/dist/styles.css?v=1743973650 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:07:31,558 basehttp "GET /function-calls/ HTTP/1.1" 200 11474
+INFO 2025-04-06 21:07:31,568 basehttp "GET /static/css/dist/styles.css?v=1743973651 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:07:32,137 basehttp "GET /system-config/ HTTP/1.1" 200 11439
+INFO 2025-04-06 21:07:32,148 basehttp "GET /static/css/dist/styles.css?v=1743973652 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:07:35,390 basehttp "GET /error-logs/ HTTP/1.1" 200 11407
+INFO 2025-04-06 21:07:35,401 basehttp "GET /static/css/dist/styles.css?v=1743973655 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:07:36,669 basehttp "GET /system-config/ HTTP/1.1" 200 11439
+INFO 2025-04-06 21:07:36,679 basehttp "GET /static/css/dist/styles.css?v=1743973656 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:07:38,686 basehttp "GET /function-calls/ HTTP/1.1" 200 11474
+INFO 2025-04-06 21:07:38,696 basehttp "GET /static/css/dist/styles.css?v=1743973658 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:07:40,541 basehttp "GET /messages/ HTTP/1.1" 200 11396
+INFO 2025-04-06 21:07:40,551 basehttp "GET /static/css/dist/styles.css?v=1743973660 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:07:41,705 basehttp "GET /prompt-templates/ HTTP/1.1" 200 12654
+INFO 2025-04-06 21:07:41,714 basehttp "GET /static/css/dist/styles.css?v=1743973661 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:07:43,080 basehttp "GET /prompt-templates/create/ HTTP/1.1" 200 16104
+INFO 2025-04-06 21:07:43,090 basehttp "GET /static/css/dist/styles.css?v=1743973663 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:07:47,326 basehttp "GET /prompt-templates/ HTTP/1.1" 200 12654
+INFO 2025-04-06 21:07:47,336 basehttp "GET /static/css/dist/styles.css?v=1743973667 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:07:47,339 basehttp "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 304 0
+INFO 2025-04-06 21:07:55,685 basehttp "GET /api-connections/ HTTP/1.1" 200 12153
+INFO 2025-04-06 21:07:55,695 basehttp "GET /static/css/dist/styles.css?v=1743973675 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:07:56,910 basehttp "GET /message-sources/ HTTP/1.1" 200 12967
+INFO 2025-04-06 21:07:56,918 basehttp "GET /static/css/dist/styles.css?v=1743973676 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:07:58,530 basehttp "GET /message-sources/1/ HTTP/1.1" 200 12765
+INFO 2025-04-06 21:07:58,542 basehttp "GET /static/css/dist/styles.css?v=1743973678 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:08:01,272 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:08:01,286 basehttp "GET /static/css/dist/styles.css?v=1743973681 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:08:03,501 basehttp "GET /message-sources/ HTTP/1.1" 200 12967
+INFO 2025-04-06 21:08:03,509 basehttp "GET /static/css/dist/styles.css?v=1743973683 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:08:05,190 basehttp "GET /message-sources/1/ HTTP/1.1" 200 12765
+INFO 2025-04-06 21:08:05,202 basehttp "GET /static/css/dist/styles.css?v=1743973685 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:08:07,032 basehttp "GET /message-sources/1/edit/ HTTP/1.1" 200 15228
+INFO 2025-04-06 21:08:07,045 basehttp "GET /static/css/dist/styles.css?v=1743973687 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:08:15,858 basehttp "GET /prompt-templates/ HTTP/1.1" 200 12654
+INFO 2025-04-06 21:08:15,867 basehttp "GET /static/css/dist/styles.css?v=1743973695 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:08:16,377 basehttp "GET /api-connections/ HTTP/1.1" 200 12153
+INFO 2025-04-06 21:08:16,389 basehttp "GET /static/css/dist/styles.css?v=1743973696 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:08:17,570 basehttp "GET /prompt-templates/ HTTP/1.1" 200 12654
+INFO 2025-04-06 21:08:17,584 basehttp "GET /static/css/dist/styles.css?v=1743973697 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:08:22,000 basehttp "GET /message-sources/ HTTP/1.1" 200 12967
+INFO 2025-04-06 21:08:22,008 basehttp "GET /static/css/dist/styles.css?v=1743973701 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:08:26,402 basehttp "GET /message-sources/1/ HTTP/1.1" 200 12765
+INFO 2025-04-06 21:08:26,414 basehttp "GET /static/css/dist/styles.css?v=1743973706 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:08:28,571 basehttp "GET /message-sources/1/edit/ HTTP/1.1" 200 15228
+INFO 2025-04-06 21:08:28,581 basehttp "GET /static/css/dist/styles.css?v=1743973708 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:08:44,463 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:08:44,472 basehttp "GET /static/css/dist/styles.css?v=1743973724 HTTP/1.1" 200 34658
+INFO 2025-04-06 21:09:10,207 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:09:10,215 basehttp "GET /static/css/dist/styles.css?v=1743973750 HTTP/1.1" 200 34629
+INFO 2025-04-06 21:09:11,229 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:09:11,236 basehttp "GET /static/css/dist/styles.css?v=1743973751 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:09:13,272 basehttp "GET /message-sources/ HTTP/1.1" 200 12967
+INFO 2025-04-06 21:09:13,279 basehttp "GET /static/css/dist/styles.css?v=1743973753 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:09:14,843 basehttp "GET /message-sources/1/ HTTP/1.1" 200 12765
+INFO 2025-04-06 21:09:14,855 basehttp "GET /static/css/dist/styles.css?v=1743973754 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:09:15,899 basehttp "GET /message-sources/1/edit/ HTTP/1.1" 200 15228
+INFO 2025-04-06 21:09:15,909 basehttp "GET /static/css/dist/styles.css?v=1743973755 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:09:20,124 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:09:20,134 basehttp "GET /static/css/dist/styles.css?v=1743973760 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:09:23,824 basehttp "GET /system-config/ HTTP/1.1" 200 11439
+INFO 2025-04-06 21:09:23,833 basehttp "GET /static/css/dist/styles.css?v=1743973763 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:09:45,729 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:09:45,739 basehttp "GET /static/css/dist/styles.css?v=1743973785 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:09:47,260 basehttp "GET /message-sources/ HTTP/1.1" 200 12967
+INFO 2025-04-06 21:09:47,271 basehttp "GET /static/css/dist/styles.css?v=1743973787 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:09:49,350 basehttp "GET /message-sources/1/ HTTP/1.1" 200 12765
+INFO 2025-04-06 21:09:49,358 basehttp "GET /static/css/dist/styles.css?v=1743973789 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:09:54,389 basehttp "GET /message-sources/1/edit/ HTTP/1.1" 200 15228
+INFO 2025-04-06 21:09:54,399 basehttp "GET /static/css/dist/styles.css?v=1743973794 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:10:01,654 autoreload /Users/prakash/Desktop/django_api_hub/admin_ui/forms.py changed, reloading.
+INFO 2025-04-06 21:10:02,138 autoreload Watching for file changes with StatReloader
+INFO 2025-04-06 21:10:11,892 autoreload /Users/prakash/Desktop/django_api_hub/admin_ui/forms.py changed, reloading.
+INFO 2025-04-06 21:10:12,309 autoreload Watching for file changes with StatReloader
+INFO 2025-04-06 21:10:12,994 basehttp "GET /message-sources/1/edit/ HTTP/1.1" 200 15228
+INFO 2025-04-06 21:10:13,005 basehttp "GET /static/css/dist/styles.css?v=1743973812 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:10:24,079 autoreload /Users/prakash/Desktop/django_api_hub/admin_ui/views.py changed, reloading.
+INFO 2025-04-06 21:10:24,496 autoreload Watching for file changes with StatReloader
+INFO 2025-04-06 21:10:24,969 basehttp "GET /message-sources/1/edit/ HTTP/1.1" 200 15228
+INFO 2025-04-06 21:10:24,977 basehttp "GET /static/css/dist/styles.css?v=1743973824 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:10:35,291 autoreload /Users/prakash/Desktop/django_api_hub/admin_ui/urls.py changed, reloading.
+INFO 2025-04-06 21:10:35,602 autoreload Watching for file changes with StatReloader
+INFO 2025-04-06 21:10:35,978 basehttp "GET /message-sources/1/edit/ HTTP/1.1" 200 15228
+INFO 2025-04-06 21:10:35,987 basehttp "GET /static/css/dist/styles.css?v=1743973835 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:10:51,622 basehttp "GET /message-sources/1/edit/ HTTP/1.1" 200 15228
+INFO 2025-04-06 21:10:51,630 basehttp "GET /static/css/dist/styles.css?v=1743973851 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:10:54,699 basehttp "GET /message-sources/1/edit/ HTTP/1.1" 200 15228
+INFO 2025-04-06 21:10:54,707 basehttp "GET /static/css/dist/styles.css?v=1743973854 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:11:12,474 basehttp "GET /message-sources/1/edit/ HTTP/1.1" 200 15228
+INFO 2025-04-06 21:11:12,483 basehttp "GET /static/css/dist/styles.css?v=1743973872 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:11:13,852 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:11:13,863 basehttp "GET /static/css/dist/styles.css?v=1743973873 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:11:15,142 basehttp "GET /system-config/ HTTP/1.1" 200 11446
+INFO 2025-04-06 21:11:15,152 basehttp "GET /static/css/dist/styles.css?v=1743973875 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:11:17,531 basehttp "GET /error-logs/ HTTP/1.1" 200 11407
+INFO 2025-04-06 21:11:17,541 basehttp "GET /static/css/dist/styles.css?v=1743973877 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:11:18,062 basehttp "GET /system-config/ HTTP/1.1" 200 11446
+INFO 2025-04-06 21:11:18,073 basehttp "GET /static/css/dist/styles.css?v=1743973878 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:11:20,360 basehttp "GET /error-logs/ HTTP/1.1" 200 11407
+INFO 2025-04-06 21:11:20,370 basehttp "GET /static/css/dist/styles.css?v=1743973880 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:11:21,197 basehttp "GET /admin/ HTTP/1.1" 200 15886
+INFO 2025-04-06 21:11:21,227 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-04-06 21:11:21,229 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-04-06 21:11:21,229 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-04-06 21:11:21,229 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-04-06 21:11:21,230 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-04-06 21:11:21,230 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-04-06 21:11:21,232 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-04-06 21:11:21,236 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-04-06 21:11:21,236 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-04-06 21:11:25,545 basehttp "GET /function-calls/ HTTP/1.1" 200 11474
+INFO 2025-04-06 21:11:25,558 basehttp "GET /static/css/dist/styles.css?v=1743973885 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:11:26,190 basehttp "GET /messages/ HTTP/1.1" 200 11396
+INFO 2025-04-06 21:11:26,201 basehttp "GET /static/css/dist/styles.css?v=1743973886 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:11:27,146 basehttp "GET /prompt-templates/ HTTP/1.1" 200 12654
+INFO 2025-04-06 21:11:27,156 basehttp "GET /static/css/dist/styles.css?v=1743973887 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:11:29,446 basehttp "GET /prompt-templates/create/ HTTP/1.1" 200 16104
+INFO 2025-04-06 21:11:29,457 basehttp "GET /static/css/dist/styles.css?v=1743973889 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:11:31,825 basehttp "GET /api-connections/ HTTP/1.1" 200 12153
+INFO 2025-04-06 21:11:31,834 basehttp "GET /static/css/dist/styles.css?v=1743973891 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:11:33,298 basehttp "GET /message-sources/ HTTP/1.1" 200 12967
+INFO 2025-04-06 21:11:33,310 basehttp "GET /static/css/dist/styles.css?v=1743973893 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:11:34,516 basehttp "GET /system-config/ HTTP/1.1" 200 11446
+INFO 2025-04-06 21:11:34,529 basehttp "GET /static/css/dist/styles.css?v=1743973894 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:11:50,323 basehttp "GET /system-config/ HTTP/1.1" 200 11446
+INFO 2025-04-06 21:11:50,331 basehttp "GET /static/css/dist/styles.css?v=1743973910 HTTP/1.1" 200 34629
+INFO 2025-04-06 21:11:51,346 basehttp "GET /system-config/ HTTP/1.1" 200 11446
+INFO 2025-04-06 21:11:51,353 basehttp "GET /static/css/dist/styles.css?v=1743973911 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:11:52,922 basehttp "GET /system-config/ HTTP/1.1" 200 11446
+INFO 2025-04-06 21:11:52,933 basehttp "GET /static/admin_ui/css/custom.css HTTP/1.1" 200 4450
+INFO 2025-04-06 21:11:52,933 basehttp "GET /static/admin_ui/js/main.js HTTP/1.1" 200 10657
+INFO 2025-04-06 21:11:52,934 basehttp "GET /static/css/dist/styles.css?v=1743973912 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:11:53,020 basehttp "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+WARNING 2025-04-06 21:11:53,282 log Not Found: /favicon.ico
+WARNING 2025-04-06 21:11:53,282 basehttp "GET /favicon.ico HTTP/1.1" 404 9584
+INFO 2025-04-06 21:12:30,062 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:12:30,074 basehttp "GET /static/css/dist/styles.css?v=1743973950 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:12:32,202 basehttp "GET /api-connections/ HTTP/1.1" 200 12153
+INFO 2025-04-06 21:12:32,212 basehttp "GET /static/css/dist/styles.css?v=1743973952 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:12:34,342 basehttp "GET /api-connections/create/ HTTP/1.1" 200 15136
+INFO 2025-04-06 21:12:34,353 basehttp "GET /static/css/dist/styles.css?v=1743973954 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:12:37,130 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:12:37,139 basehttp "GET /static/css/dist/styles.css?v=1743973957 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:12:45,163 basehttp "GET /message-sources/ HTTP/1.1" 200 12967
+INFO 2025-04-06 21:12:45,173 basehttp "GET /static/css/dist/styles.css?v=1743973965 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:12:51,608 basehttp "GET /api-connections/ HTTP/1.1" 200 12153
+INFO 2025-04-06 21:12:51,622 basehttp "GET /static/css/dist/styles.css?v=1743973971 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:12:56,164 basehttp "GET /message-sources/ HTTP/1.1" 200 12967
+INFO 2025-04-06 21:12:56,174 basehttp "GET /static/css/dist/styles.css?v=1743973976 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:12:57,407 basehttp "GET /message-sources/1/ HTTP/1.1" 200 12765
+INFO 2025-04-06 21:12:57,416 basehttp "GET /static/css/dist/styles.css?v=1743973977 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:13:01,778 basehttp "GET /message-sources/1/edit/ HTTP/1.1" 200 15228
+INFO 2025-04-06 21:13:01,792 basehttp "GET /static/css/dist/styles.css?v=1743973981 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:13:09,721 basehttp "GET /api-connections/ HTTP/1.1" 200 12153
+INFO 2025-04-06 21:13:09,733 basehttp "GET /static/css/dist/styles.css?v=1743973989 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:13:10,362 basehttp "GET /prompt-templates/ HTTP/1.1" 200 12654
+INFO 2025-04-06 21:13:10,372 basehttp "GET /static/css/dist/styles.css?v=1743973990 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:13:10,807 basehttp "GET /messages/ HTTP/1.1" 200 11396
+INFO 2025-04-06 21:13:11,243 basehttp "GET /function-calls/ HTTP/1.1" 200 11474
+INFO 2025-04-06 21:13:11,252 basehttp "GET /static/css/dist/styles.css?v=1743973991 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:13:12,059 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:13:12,070 basehttp "GET /static/css/dist/styles.css?v=1743973992 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:13:19,972 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:13:19,982 basehttp "GET /static/css/dist/styles.css?v=1743973999 HTTP/1.1" 200 34629
+INFO 2025-04-06 21:13:20,999 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:13:21,010 basehttp "GET /static/css/dist/styles.css?v=1743974000 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:13:22,632 basehttp "GET /system-config/ HTTP/1.1" 200 11446
+INFO 2025-04-06 21:13:22,643 basehttp "GET /static/css/dist/styles.css?v=1743974002 HTTP/1.1" 200 34792
+WARNING 2025-04-06 21:13:26,420 log Not Found: /system-config/add
+WARNING 2025-04-06 21:13:26,421 basehttp "GET /system-config/add HTTP/1.1" 404 9602
+INFO 2025-04-06 21:13:29,389 basehttp "GET /function-calls/ HTTP/1.1" 200 11474
+INFO 2025-04-06 21:13:29,404 basehttp "GET /static/css/dist/styles.css?v=1743974009 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:13:29,838 basehttp "GET /messages/ HTTP/1.1" 200 11396
+INFO 2025-04-06 21:13:30,265 basehttp "GET /prompt-templates/ HTTP/1.1" 200 12654
+INFO 2025-04-06 21:13:30,278 basehttp "GET /static/css/dist/styles.css?v=1743974010 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:13:31,070 basehttp "GET /prompt-templates/ HTTP/1.1" 200 12654
+INFO 2025-04-06 21:13:31,081 basehttp "GET /static/css/dist/styles.css?v=1743974011 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:13:31,579 basehttp "GET /api-connections/ HTTP/1.1" 200 12153
+INFO 2025-04-06 21:13:32,107 basehttp "GET /message-sources/ HTTP/1.1" 200 12967
+INFO 2025-04-06 21:13:32,117 basehttp "GET /static/css/dist/styles.css?v=1743974012 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:13:32,555 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:14:15,834 basehttp "GET /message-sources/ HTTP/1.1" 200 12967
+INFO 2025-04-06 21:14:15,845 basehttp "GET /static/css/dist/styles.css?v=1743974055 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:14:17,210 basehttp "GET /message-sources/1/ HTTP/1.1" 200 12765
+INFO 2025-04-06 21:14:17,220 basehttp "GET /static/css/dist/styles.css?v=1743974057 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:14:18,984 basehttp "GET /message-sources/1/edit/ HTTP/1.1" 200 15228
+INFO 2025-04-06 21:14:18,994 basehttp "GET /static/css/dist/styles.css?v=1743974058 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:15:08,827 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:15:08,839 basehttp "GET /static/css/dist/styles.css?v=1743974108 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:15:14,237 basehttp "GET /messages/ HTTP/1.1" 200 11396
+INFO 2025-04-06 21:15:14,246 basehttp "GET /static/css/dist/styles.css?v=1743974114 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:15:15,876 basehttp "GET /function-calls/ HTTP/1.1" 200 11474
+INFO 2025-04-06 21:15:15,885 basehttp "GET /static/css/dist/styles.css?v=1743974115 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:15:17,838 basehttp "GET /system-config/ HTTP/1.1" 200 11446
+INFO 2025-04-06 21:15:17,851 basehttp "GET /static/css/dist/styles.css?v=1743974117 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:15:34,118 basehttp "GET /error-logs/ HTTP/1.1" 200 11407
+INFO 2025-04-06 21:15:34,128 basehttp "GET /static/css/dist/styles.css?v=1743974134 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:15:34,642 basehttp "GET /admin/ HTTP/1.1" 200 15886
+INFO 2025-04-06 21:15:37,692 basehttp "GET /messages/ HTTP/1.1" 200 11396
+INFO 2025-04-06 21:15:37,702 basehttp "GET /static/css/dist/styles.css?v=1743974137 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:15:38,438 basehttp "GET /prompt-templates/ HTTP/1.1" 200 12654
+INFO 2025-04-06 21:15:38,452 basehttp "GET /static/css/dist/styles.css?v=1743974138 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:15:41,132 basehttp "GET /api-connections/ HTTP/1.1" 200 12153
+INFO 2025-04-06 21:15:41,141 basehttp "GET /static/css/dist/styles.css?v=1743974141 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:15:41,830 basehttp "GET /message-sources/ HTTP/1.1" 200 12967
+INFO 2025-04-06 21:15:43,054 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:15:43,065 basehttp "GET /static/css/dist/styles.css?v=1743974143 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:15:47,358 basehttp "GET /api-connections/ HTTP/1.1" 200 12153
+INFO 2025-04-06 21:15:47,366 basehttp "GET /static/css/dist/styles.css?v=1743974147 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:15:49,206 basehttp "GET /message-sources/ HTTP/1.1" 200 12967
+INFO 2025-04-06 21:15:49,218 basehttp "GET /static/css/dist/styles.css?v=1743974149 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:15:54,248 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:15:54,259 basehttp "GET /static/css/dist/styles.css?v=1743974154 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:23:04,603 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:23:04,612 basehttp "GET /static/css/dist/styles.css?v=1743974584 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:23:04,616 basehttp "GET /static/admin_ui/css/custom.css HTTP/1.1" 304 0
+INFO 2025-04-06 21:23:04,618 basehttp "GET /static/admin_ui/js/main.js HTTP/1.1" 304 0
+INFO 2025-04-06 21:23:04,621 basehttp "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 304 0
+INFO 2025-04-06 21:23:22,030 autoreload /Users/prakash/Desktop/django_api_hub/admin_ui/views.py changed, reloading.
+INFO 2025-04-06 21:23:22,504 autoreload Watching for file changes with StatReloader
+INFO 2025-04-06 21:23:23,024 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:23:23,034 basehttp "GET /static/css/dist/styles.css?v=1743974603 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:23:35,430 autoreload /Users/prakash/Desktop/django_api_hub/admin_ui/urls.py changed, reloading.
+INFO 2025-04-06 21:23:35,862 autoreload Watching for file changes with StatReloader
+INFO 2025-04-06 21:23:36,327 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:23:36,337 basehttp "GET /static/css/dist/styles.css?v=1743974616 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:23:54,918 autoreload /Users/prakash/Desktop/django_api_hub/openai_processor/models.py changed, reloading.
+INFO 2025-04-06 21:23:55,327 autoreload Watching for file changes with StatReloader
+INFO 2025-04-06 21:23:55,817 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:23:55,825 basehttp "GET /static/css/dist/styles.css?v=1743974635 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:24:11,315 autoreload /Users/prakash/Desktop/django_api_hub/openai_processor/models.py changed, reloading.
+INFO 2025-04-06 21:24:11,738 autoreload Watching for file changes with StatReloader
+INFO 2025-04-06 21:24:12,219 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:24:12,230 basehttp "GET /static/css/dist/styles.css?v=1743974652 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:24:34,889 autoreload /Users/prakash/Desktop/django_api_hub/openai_processor/services.py changed, reloading.
+INFO 2025-04-06 21:24:35,228 autoreload Watching for file changes with StatReloader
+INFO 2025-04-06 21:24:35,677 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:24:35,684 basehttp "GET /static/css/dist/styles.css?v=1743974675 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:24:56,296 autoreload /Users/prakash/Desktop/django_api_hub/openai_processor/services.py changed, reloading.
+INFO 2025-04-06 21:24:56,714 autoreload Watching for file changes with StatReloader
+INFO 2025-04-06 21:24:57,204 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:24:57,213 basehttp "GET /static/css/dist/styles.css?v=1743974697 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:25:17,762 autoreload /Users/prakash/Desktop/django_api_hub/openai_processor/services.py changed, reloading.
+INFO 2025-04-06 21:25:18,086 autoreload Watching for file changes with StatReloader
+INFO 2025-04-06 21:25:18,551 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:25:18,560 basehttp "GET /static/css/dist/styles.css?v=1743974718 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:25:40,175 autoreload /Users/prakash/Desktop/django_api_hub/openai_processor/forms.py changed, reloading.
+INFO 2025-04-06 21:25:40,597 autoreload Watching for file changes with StatReloader
+INFO 2025-04-06 21:25:41,074 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:25:41,082 basehttp "GET /static/css/dist/styles.css?v=1743974741 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:25:53,461 autoreload /Users/prakash/Desktop/django_api_hub/openai_processor/forms.py changed, reloading.
+INFO 2025-04-06 21:25:53,887 autoreload Watching for file changes with StatReloader
+INFO 2025-04-06 21:25:54,363 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:25:54,371 basehttp "GET /static/css/dist/styles.css?v=1743974754 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:26:09,860 autoreload /Users/prakash/Desktop/django_api_hub/openai_processor/forms.py changed, reloading.
+INFO 2025-04-06 21:26:10,275 autoreload Watching for file changes with StatReloader
+INFO 2025-04-06 21:26:10,763 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:26:10,771 basehttp "GET /static/css/dist/styles.css?v=1743974770 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:26:30,405 autoreload /Users/prakash/Desktop/django_api_hub/admin_ui/views.py changed, reloading.
+INFO 2025-04-06 21:26:30,958 autoreload Watching for file changes with StatReloader
+INFO 2025-04-06 21:26:31,401 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:26:31,411 basehttp "GET /static/css/dist/styles.css?v=1743974791 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:26:57,150 autoreload /Users/prakash/Desktop/django_api_hub/admin_ui/views.py changed, reloading.
+INFO 2025-04-06 21:26:57,533 autoreload Watching for file changes with StatReloader
+INFO 2025-04-06 21:26:57,961 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:26:57,969 basehttp "GET /static/css/dist/styles.css?v=1743974817 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:27:12,391 autoreload /Users/prakash/Desktop/django_api_hub/admin_ui/urls.py changed, reloading.
+INFO 2025-04-06 21:27:12,713 autoreload Watching for file changes with StatReloader
+INFO 2025-04-06 21:27:13,079 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:27:13,086 basehttp "GET /static/css/dist/styles.css?v=1743974833 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:27:22,544 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:27:22,552 basehttp "GET /static/css/dist/styles.css?v=1743974842 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:27:30,744 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:27:30,751 basehttp "GET /static/css/dist/styles.css?v=1743974850 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:27:44,156 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:27:44,165 basehttp "GET /static/css/dist/styles.css?v=1743974864 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:27:47,255 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:27:47,265 basehttp "GET /static/css/dist/styles.css?v=1743974867 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:28:01,667 basehttp "GET / HTTP/1.1" 200 18892
+INFO 2025-04-06 21:28:01,677 basehttp "GET /static/css/dist/styles.css?v=1743974881 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:28:34,593 basehttp "GET / HTTP/1.1" 200 18899
+INFO 2025-04-06 21:28:34,601 basehttp "GET /static/css/dist/styles.css?v=1743974914 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:28:37,694 basehttp "GET / HTTP/1.1" 200 18942
+INFO 2025-04-06 21:28:37,702 basehttp "GET /static/css/dist/styles.css?v=1743974917 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:28:38,706 basehttp "GET / HTTP/1.1" 200 19346
+INFO 2025-04-06 21:28:38,714 basehttp "GET /static/css/dist/styles.css?v=1743974918 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:29:11,617 basehttp "GET / HTTP/1.1" 200 19346
+INFO 2025-04-06 21:29:11,625 basehttp "GET /static/css/dist/styles.css?v=1743974951 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:29:32,103 autoreload /Users/prakash/Desktop/django_api_hub/openai_processor/admin.py changed, reloading.
+INFO 2025-04-06 21:29:32,575 autoreload Watching for file changes with StatReloader
+INFO 2025-04-06 21:29:33,008 basehttp "GET / HTTP/1.1" 200 19346
+INFO 2025-04-06 21:29:33,018 basehttp "GET /static/css/dist/styles.css?v=1743974972 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:29:47,641 autoreload /Users/prakash/Desktop/django_api_hub/openai_processor/admin.py changed, reloading.
+INFO 2025-04-06 21:29:48,082 autoreload Watching for file changes with StatReloader
+INFO 2025-04-06 21:29:48,535 basehttp "GET / HTTP/1.1" 200 19346
+INFO 2025-04-06 21:29:48,547 basehttp "GET /static/css/dist/styles.css?v=1743974988 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:29:58,988 autoreload /Users/prakash/Desktop/django_api_hub/openai_processor/admin.py changed, reloading.
+INFO 2025-04-06 21:29:59,394 autoreload Watching for file changes with StatReloader
+INFO 2025-04-06 21:29:59,800 basehttp "GET / HTTP/1.1" 200 19346
+INFO 2025-04-06 21:29:59,809 basehttp "GET /static/css/dist/styles.css?v=1743974999 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:30:19,613 autoreload /Users/prakash/Desktop/django_api_hub/openai_processor/admin.py changed, reloading.
+INFO 2025-04-06 21:30:19,945 autoreload Watching for file changes with StatReloader
+INFO 2025-04-06 21:30:20,320 basehttp "GET / HTTP/1.1" 200 19346
+INFO 2025-04-06 21:30:20,331 basehttp "GET /static/admin_ui/css/custom.css HTTP/1.1" 304 0
+INFO 2025-04-06 21:30:20,332 basehttp "GET /static/css/dist/styles.css?v=1743975020 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:30:20,333 basehttp "GET /static/admin_ui/js/main.js HTTP/1.1" 304 0
+INFO 2025-04-06 21:31:47,117 basehttp "GET / HTTP/1.1" 200 19346
+INFO 2025-04-06 21:31:47,126 basehttp "GET /static/css/dist/styles.css?v=1743975107 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:31:47,131 basehttp "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 304 0
+INFO 2025-04-06 21:31:49,638 basehttp "GET /message-sources/ HTTP/1.1" 200 13421
+INFO 2025-04-06 21:31:49,647 basehttp "GET /static/css/dist/styles.css?v=1743975109 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:31:51,458 basehttp "GET /message-sources/1/ HTTP/1.1" 200 13219
+INFO 2025-04-06 21:31:51,468 basehttp "GET /static/css/dist/styles.css?v=1743975111 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:31:52,636 basehttp "GET /message-sources/1/edit/ HTTP/1.1" 200 15682
+INFO 2025-04-06 21:31:52,645 basehttp "GET /static/css/dist/styles.css?v=1743975112 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:31:55,234 basehttp "GET / HTTP/1.1" 200 19346
+INFO 2025-04-06 21:31:55,242 basehttp "GET /static/css/dist/styles.css?v=1743975115 HTTP/1.1" 200 34792
+ERROR 2025-04-06 21:32:03,033 log Internal Server Error: /ai-model-configs/
+Traceback (most recent call last):
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: openai_processor_aimodelconfiguration
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/prakash/Desktop/django_api_hub/admin_ui/views.py", line 431, in ai_model_configs
+    return render(request, 'admin_ui/ai_model_configs/index.html', context)
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 199, in render
+    len_values = len(values)
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/db/models/query.py", line 366, in __len__
+    self._fetch_all()
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1935, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1622, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/prakash/ai/unfold-project/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: openai_processor_aimodelconfiguration
+ERROR 2025-04-06 21:32:03,036 basehttp "GET /ai-model-configs/ HTTP/1.1" 500 227552
+INFO 2025-04-06 21:32:26,168 autoreload Watching for file changes with StatReloader
+INFO 2025-04-06 21:32:26,743 basehttp "GET /ai-model-configs/ HTTP/1.1" 200 11979
+INFO 2025-04-06 21:32:26,755 basehttp "GET /static/css/dist/styles.css?v=1743975146 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:32:28,991 basehttp "GET /ai-model-configs/ HTTP/1.1" 200 11979
+INFO 2025-04-06 21:32:29,001 basehttp "GET /static/css/dist/styles.css?v=1743975148 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:32:31,417 basehttp "GET /ai-model-configs/ HTTP/1.1" 200 11979
+INFO 2025-04-06 21:32:31,426 basehttp "GET /static/css/dist/styles.css?v=1743975151 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:32:32,477 basehttp "GET / HTTP/1.1" 200 19346
+INFO 2025-04-06 21:32:32,488 basehttp "GET /static/css/dist/styles.css?v=1743975152 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:32:36,089 basehttp "GET /message-sources/ HTTP/1.1" 200 13421
+INFO 2025-04-06 21:32:36,099 basehttp "GET /static/css/dist/styles.css?v=1743975156 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:32:37,864 basehttp "GET /message-sources/2/ HTTP/1.1" 200 13158
+INFO 2025-04-06 21:32:37,874 basehttp "GET /static/css/dist/styles.css?v=1743975157 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:32:39,552 basehttp "GET /message-sources/2/edit/ HTTP/1.1" 200 15569
+INFO 2025-04-06 21:32:39,567 basehttp "GET /static/css/dist/styles.css?v=1743975159 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:32:45,379 basehttp "GET /message-sources/ HTTP/1.1" 200 13421
+INFO 2025-04-06 21:32:45,389 basehttp "GET /static/css/dist/styles.css?v=1743975165 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:32:46,176 basehttp "GET /api-connections/ HTTP/1.1" 200 12607
+INFO 2025-04-06 21:32:46,189 basehttp "GET /static/css/dist/styles.css?v=1743975166 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:32:48,417 basehttp "GET /api-connections/1/ HTTP/1.1" 200 13567
+INFO 2025-04-06 21:32:48,430 basehttp "GET /static/css/dist/styles.css?v=1743975168 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:32:50,897 basehttp "GET /api-connections/1/edit/ HTTP/1.1" 200 15791
+INFO 2025-04-06 21:32:50,906 basehttp "GET /static/css/dist/styles.css?v=1743975170 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:32:58,985 basehttp "GET /ai-model-configs/ HTTP/1.1" 200 11979
+INFO 2025-04-06 21:32:58,994 basehttp "GET /static/css/dist/styles.css?v=1743975178 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:33:00,624 basehttp "GET /prompt-templates/ HTTP/1.1" 200 13108
+INFO 2025-04-06 21:33:00,637 basehttp "GET /static/css/dist/styles.css?v=1743975180 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:33:04,997 basehttp "GET /messages/ HTTP/1.1" 200 11850
+INFO 2025-04-06 21:33:05,009 basehttp "GET /static/css/dist/styles.css?v=1743975184 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:33:05,728 basehttp "GET /function-calls/ HTTP/1.1" 200 11928
+INFO 2025-04-06 21:33:05,740 basehttp "GET /static/css/dist/styles.css?v=1743975185 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:33:06,774 basehttp "GET /system-config/ HTTP/1.1" 200 11974
+INFO 2025-04-06 21:33:06,785 basehttp "GET /static/css/dist/styles.css?v=1743975186 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:33:08,187 basehttp "GET /system-config/create/ HTTP/1.1" 200 12998
+INFO 2025-04-06 21:33:08,197 basehttp "GET /static/css/dist/styles.css?v=1743975188 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:33:14,904 basehttp "GET /prompt-templates/ HTTP/1.1" 200 13108
+INFO 2025-04-06 21:33:14,917 basehttp "GET /static/css/dist/styles.css?v=1743975194 HTTP/1.1" 200 34792
+INFO 2025-04-06 21:33:17,632 basehttp "GET / HTTP/1.1" 200 19346
+INFO 2025-04-06 21:33:17,642 basehttp "GET /static/css/dist/styles.css?v=1743975197 HTTP/1.1" 200 34792

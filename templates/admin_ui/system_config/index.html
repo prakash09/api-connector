@@ -5,7 +5,7 @@
 {% block header %}System Configuration{% endblock %}
 
 {% block header_actions %}
-<a href="#" class="btn-primary">Edit Configuration</a>
+<a href="{% url 'admin_ui:system_config_create' %}" class="btn-primary">Add Configuration</a>
 {% endblock %}
 
 {% block content %}
@@ -17,6 +17,7 @@
                 <th class="table-header-cell">Value</th>
                 <th class="table-header-cell">Description</th>
                 <th class="table-header-cell">Last Updated</th>
+                <th class="table-header-cell">Actions</th> {# Added Actions header #}
             </tr>
         </thead>
         <tbody class="table-body">
@@ -28,10 +29,13 @@
                 </td>
                 <td class="table-cell">{{ config.description }}</td>
                 <td class="table-cell">{{ config.updated_at|date:"M d, Y H:i" }}</td>
+                <td class="table-cell"> {# Added Actions cell #}
+                    <a href="{% url 'admin_ui:system_config_edit' config.id %}" class="text-blue-600 hover:text-blue-900">Edit</a>
+                </td>
             </tr>
             {% empty %}
             <tr>
-                <td colspan="4" class="px-6 py-4 text-center text-gray-500">No system configurations found</td>
+                <td colspan="5" class="px-6 py-4 text-center text-gray-500">No system configurations found</td> {# Updated colspan #}
             </tr>
             {% endfor %}
         </tbody>

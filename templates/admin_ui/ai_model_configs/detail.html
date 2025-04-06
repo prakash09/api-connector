@@ -1,0 +1,119 @@
+{% extends "admin_ui/base.html" %}
+
+{% block title %}{{ config.name }} - AI Model Configuration{% endblock %}
+
+{% block header %}{{ config.name }}{% endblock %}
+
+{% block header_actions %}
+<a href="{% url 'admin_ui:ai_model_configs' %}" class="btn-secondary mr-2">Back to List</a>
+<a href="{% url 'admin_ui:ai_model_config_edit' config.id %}" class="btn-primary">Edit Configuration</a>
+{% endblock %}
+
+{% block content %}
+<div class="form-section">
+    <h2 class="form-section-title">Configuration Details</h2>
+    <div class="form-grid">
+        <div>
+            <label class="label">Name</label>
+            <p class="mt-1 text-sm text-gray-900">{{ config.name }}</p>
+        </div>
+        <div>
+            <label class="label">Type</label>
+            <p class="mt-1 text-sm text-gray-900">{{ config.get_model_type_display }}</p>
+        </div>
+        <div>
+            <label class="label">Status</label>
+            <p class="mt-1 text-sm text-gray-900">
+                {% if config.is_active %}
+                    <span class="badge badge-success">Active</span>
+                {% else %}
+                    <span class="badge bg-gray-100 text-gray-800">Inactive</span>
+                {% endif %}
+            </p>
+        </div>
+        <div>
+            <label class="label">Created At</label>
+            <p class="mt-1 text-sm text-gray-900">{{ config.created_at|date:"M d, Y H:i" }}</p>
+        </div>
+    </div>
+    
+    <div class="mt-4">
+        <label class="label">Description</label>
+        <p class="mt-1 text-sm text-gray-900">{{ config.description|default:"No description provided." }}</p>
+    </div>
+</div>
+
+<div class="form-section mt-8">
+    <h2 class="form-section-title">API Configuration</h2>
+    <div class="form-grid">
+        <div>
+            <label class="label">Base URL</label>
+            <p class="mt-1 text-sm text-gray-900">{{ config.base_url|default:"Default OpenAI URL" }}</p>
+        </div>
+        <div>
+            <label class="label">API Key</label>
+            <p class="mt-1 text-sm text-gray-900">••••••••••••••••</p>
+        </div>
+        <div>
+            <label class="label">Organization ID</label>
+            <p class="mt-1 text-sm text-gray-900">{{ config.organization_id|default:"Not specified" }}</p>
+        </div>
+    </div>
+</div>
+
+<div class="form-section mt-8">
+    <h2 class="form-section-title">Default Parameters</h2>
+    <div class="form-grid">
+        <div>
+            <label class="label">Default Model</label>
+            <p class="mt-1 text-sm text-gray-900">{{ config.default_model }}</p>
+        </div>
+        <div>
+            <label class="label">Default Temperature</label>
+            <p class="mt-1 text-sm text-gray-900">{{ config.default_temperature }}</p>
+        </div>
+        <div>
+            <label class="label">Default Max Tokens</label>
+            <p class="mt-1 text-sm text-gray-900">{{ config.default_max_tokens }}</p>
+        </div>
+    </div>
+</div>
+
+<div class="mt-8">
+    <h2 class="text-lg font-medium text-gray-900 mb-4">Prompt Templates Using This Configuration</h2>
+    <div class="table-container">
+        <table class="table">
+            <thead class="table-header">
+                <tr>
+                    <th class="table-header-cell">Name</th>
+                    <th class="table-header-cell">Model</th>
+                    <th class="table-header-cell">Status</th>
+                    <th class="table-header-cell">Actions</th>
+                </tr>
+            </thead>
+            <tbody class="table-body">
+                {% for template in templates %}
+                <tr class="table-row">
+                    <td class="table-cell font-medium text-gray-900">{{ template.name }}</td>
+                    <td class="table-cell">{{ template.model }}</td>
+                    <td class="table-cell">
+                        {% if template.is_active %}
+                            <span class="badge badge-success">Active</span>
+                        {% else %}
+                            <span class="badge bg-gray-100 text-gray-800">Inactive</span>
+                        {% endif %}
+                    </td>
+                    <td class="table-cell">
+                        <a href="{% url 'admin_ui:prompt_template_detail' template.id %}" class="text-blue-600 hover:text-blue-900">View</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4" class="px-6 py-4 text-center text-gray-500">No prompt templates are using this configuration</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

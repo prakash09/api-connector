@@ -34,9 +34,48 @@
         <label class="label">User Prompt Template</label>
         <pre class="code-block">{{ template.user_prompt_template }}</pre>
     </div>
-    <div class="mt-4">
-        <label class="label">Functions</label>
-        <pre class="code-block">{{ template.functions|pprint }}</pre> {# Assuming you have a pprint template filter #}
+</div>
+
+<div class="form-section mt-8">
+    <h2 class="form-section-title">AI Model Configuration</h2>
+    <div class="form-grid">
+        {% if template.ai_model_config %}
+        <div>
+            <label class="label">AI Model</label>
+            <p class="mt-1 text-sm text-gray-900">
+                <a href="{% url 'admin_ui:ai_model_config_detail' template.ai_model_config.id %}" class="text-blue-600 hover:text-blue-900">
+                    {{ template.ai_model_config.name }} ({{ template.ai_model_config.get_model_type_display }})
+                </a>
+            </p>
+        </div>
+        {% endif %}
+        <div>
+            <label class="label">Model</label>
+            <p class="mt-1 text-sm text-gray-900">{{ template.model }}</p>
+        </div>
+        <div>
+            <label class="label">Temperature</label>
+            <p class="mt-1 text-sm text-gray-900">{{ template.temperature }}</p>
+        </div>
+        <div>
+            <label class="label">Max Tokens</label>
+            <p class="mt-1 text-sm text-gray-900">{{ template.max_tokens }}</p>
+        </div>
+        <div>
+            <label class="label">Function Calling</label>
+            <p class="mt-1 text-sm text-gray-900">
+                {% if template.function_calling_enabled %}
+                    <span class="badge badge-success">Enabled</span>
+                {% else %}
+                    <span class="badge bg-gray-100 text-gray-800">Disabled</span>
+                {% endif %}
+            </p>
+        </div>
     </div>
+</div>
+
+<div class="mt-8">
+    <label class="label">Functions</label>
+    <pre class="code-block">{{ template.functions|pprint }}</pre> {# Assuming you have a pprint template filter #}
 </div>
 {% endblock %}

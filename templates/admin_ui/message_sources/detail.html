@@ -6,7 +6,7 @@
 
 {% block header_actions %}
 <a href="{% url 'admin_ui:message_sources' %}" class="btn-secondary mr-2">Back to List</a>
-<a href="#" class="btn-primary">Edit Source</a>
+<a href="{% url 'admin_ui:message_source_edit' source.id %}" class="btn-primary">Edit Source</a>
 {% endblock %}
 
 {% block content %}

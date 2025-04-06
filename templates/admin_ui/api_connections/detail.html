@@ -6,7 +6,7 @@
 
 {% block header_actions %}
 <a href="{% url 'admin_ui:api_connections' %}" class="btn-secondary mr-2">Back to List</a>
-<a href="#" class="btn-primary">Edit Connection</a>
+<a href="{% url 'admin_ui:api_connection_edit' connection.id %}" class="btn-primary">Edit Connection</a>
 {% endblock %}
 
 {% block content %}

@@ -9,7 +9,7 @@ from openai.types.chat import ChatCompletion
 
 from api_connector.models import FunctionDefinition
 from message_receiver.models import Message, ProcessedMessage
-from .models import PromptTemplate, FunctionCallLog
+from .models import PromptTemplate, FunctionCallLog, AIModelConfiguration
 
 logger = logging.getLogger('api_hub.openai_processor')
 
@@ -18,15 +18,34 @@ class OpenAIService:
     Service for interacting with OpenAI API
     """
     
-    def __init__(self, api_key: Optional[str] = None):
+    def __init__(self, api_key: Optional[str] = None, model_config: Optional[AIModelConfiguration] = None):
         """
         Initialize the OpenAI service
         
         Args:
             api_key: OpenAI API key (defaults to settings.OPENAI_API_KEY)
+            model_config: AIModelConfiguration to use (defaults to None)
         """
-        self.api_key = api_key or settings.OPENAI_API_KEY
-        self.client = OpenAI(api_key=self.api_key)
+        self.model_config = model_config
+        
+        if model_config:
+            # Use the model configuration
+            self.api_key = model_config.api_key
+            
+            # Initialize the client with the appropriate configuration
+            client_kwargs = {'api_key': self.api_key}
+            
+            if model_config.base_url:
+                client_kwargs['base_url'] = model_config.base_url
+                
+            if model_config.organization_id:
+                client_kwargs['organization'] = model_config.organization_id
+                
+            self.client = OpenAI(**client_kwargs)
+        else:
+            # Use the default configuration
+            self.api_key = api_key or settings.OPENAI_API_KEY
+            self.client = OpenAI(api_key=self.api_key)
     
     def process_message(self, message: Message, prompt_template: PromptTemplate) -> ProcessedMessage:
         """
@@ -40,6 +59,13 @@ class OpenAIService:
             ProcessedMessage object with the results
         """
         start_time = time.time()
+        
+        # Check if we need to use a specific AI model configuration
+        if prompt_template.ai_model_config and prompt_template.ai_model_config.is_active:
+            # Create a new service instance with the specific model configuration
+            if self.model_config != prompt_template.ai_model_config:
+                service = OpenAIService(model_config=prompt_template.ai_model_config)
+                return service.process_message(message, prompt_template)
         
         # Prepare the message content
         if not message.content_text:
@@ -269,6 +295,20 @@ class OpenAIService:
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt}
         ]
+        
+        # Use model configuration's default values if available
+        if self.model_config:
+            # Use the specified model if provided, otherwise use the default model from the configuration
+            if model == 'gpt-4o' and self.model_config.default_model:  # Only override if it's the default model
+                model = self.model_config.default_model
+            
+            # Use the specified temperature if provided, otherwise use the default from the configuration
+            if temperature == 0.7:  # Only override if it's the default temperature
+                temperature = self.model_config.default_temperature
+            
+            # Use the specified max_tokens if provided, otherwise use the default from the configuration
+            if max_tokens == 1000:  # Only override if it's the default max_tokens
+                max_tokens = self.model_config.default_max_tokens
         
         kwargs = {
             "model": model,

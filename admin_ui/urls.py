@@ -15,11 +15,13 @@ urlpatterns = [
     path('message-sources/', views.message_sources, name='message_sources'),
     path('message-sources/<int:source_id>/', views.message_source_detail, name='message_source_detail'),
     path('message-sources/create/', views.message_source_create, name='message_source_create'),
+    path('message-sources/<int:source_id>/edit/', views.message_source_edit, name='message_source_edit'), # Added edit URL
     
     # API Connections
     path('api-connections/', views.api_connections, name='api_connections'),
     path('api-connections/<int:connection_id>/', views.api_connection_detail, name='api_connection_detail'),
     path('api-connections/create/', views.api_connection_create, name='api_connection_create'),
+    path('api-connections/<int:connection_id>/edit/', views.api_connection_edit, name='api_connection_edit'), # Added edit URL
     
     # Prompt Templates
     path('prompt-templates/', views.prompt_templates, name='prompt_templates'),
@@ -41,4 +43,12 @@ urlpatterns = [
     
     # System Config
     path('system-config/', views.system_config, name='system_config'),
+    path('system-config/create/', views.system_config_create, name='system_config_create'),
+    path('system-config/<int:config_id>/edit/', views.system_config_edit, name='system_config_edit'),
+    
+    # AI Model Configurations
+    path('ai-model-configs/', views.ai_model_configs, name='ai_model_configs'),
+    path('ai-model-configs/<int:config_id>/', views.ai_model_config_detail, name='ai_model_config_detail'),
+    path('ai-model-configs/create/', views.ai_model_config_create, name='ai_model_config_create'),
+    path('ai-model-configs/<int:config_id>/edit/', views.ai_model_config_edit, name='ai_model_config_edit'),
 ]

@@ -9,8 +9,9 @@ from django.contrib import messages as django_messages # Renamed to avoid confli
 from core.models import ErrorLog, SystemConfig
 from message_receiver.models import MessageSource, Message
 from api_connector.models import APIConfiguration, APIEndpoint
-from openai_processor.models import PromptTemplate, FunctionCallLog
-from openai_processor.forms import PromptTemplateForm # Import the form
+from openai_processor.models import PromptTemplate, FunctionCallLog, AIModelConfiguration
+from openai_processor.forms import PromptTemplateForm, AIModelConfigurationForm # Import forms
+from .forms import MessageSourceForm, APIConfigurationForm, SystemConfigForm # Import new forms
 
 
 class AdminUILoginView(LoginView):
@@ -104,9 +105,44 @@ def message_source_detail(request, source_id):
 @login_required
 def message_source_create(request):
     """Create a new message source"""
-    # This is a placeholder for now
-    # In a real implementation, this would handle form submission
-    return render(request, 'admin_ui/message_sources/create.html')
+    if request.method == 'POST':
+        form = MessageSourceForm(request.POST)
+        if form.is_valid():
+            source = form.save()
+            django_messages.success(request, f"Message source '{source.name}' created successfully.")
+            return redirect('admin_ui:message_source_detail', source_id=source.id)
+    else:
+        form = MessageSourceForm()
+    
+    context = {
+        'form': form,
+        'form_title': 'Create New Message Source'
+    }
+    # Reuse the generic form template if suitable, or create a specific one
+    return render(request, 'admin_ui/prompt_templates/form.html', context) 
+
+
+@login_required
+def message_source_edit(request, source_id):
+    """Edit an existing message source"""
+    source = get_object_or_404(MessageSource, id=source_id)
+    
+    if request.method == 'POST':
+        form = MessageSourceForm(request.POST, instance=source)
+        if form.is_valid():
+            form.save()
+            django_messages.success(request, f"Message source '{source.name}' updated successfully.")
+            return redirect('admin_ui:message_source_detail', source_id=source.id)
+    else:
+        form = MessageSourceForm(instance=source)
+        
+    context = {
+        'form': form,
+        'source': source, # Pass the object for context in the template if needed
+        'form_title': f'Edit Message Source: {source.name}'
+    }
+    # Reuse the generic form template
+    return render(request, 'admin_ui/prompt_templates/form.html', context)
 
 
 @login_required
@@ -140,9 +176,44 @@ def api_connection_detail(request, connection_id):
 @login_required
 def api_connection_create(request):
     """Create a new API connection"""
-    # This is a placeholder for now
-    # In a real implementation, this would handle form submission
-    return render(request, 'admin_ui/api_connections/create.html')
+    if request.method == 'POST':
+        form = APIConfigurationForm(request.POST)
+        if form.is_valid():
+            connection = form.save()
+            django_messages.success(request, f"API connection '{connection.name}' created successfully.")
+            return redirect('admin_ui:api_connection_detail', connection_id=connection.id)
+    else:
+        form = APIConfigurationForm()
+    
+    context = {
+        'form': form,
+        'form_title': 'Create New API Connection'
+    }
+    # Reuse the generic form template
+    return render(request, 'admin_ui/prompt_templates/form.html', context)
+
+
+@login_required
+def api_connection_edit(request, connection_id):
+    """Edit an existing API connection"""
+    connection = get_object_or_404(APIConfiguration, id=connection_id)
+    
+    if request.method == 'POST':
+        form = APIConfigurationForm(request.POST, instance=connection)
+        if form.is_valid():
+            form.save()
+            django_messages.success(request, f"API connection '{connection.name}' updated successfully.")
+            return redirect('admin_ui:api_connection_detail', connection_id=connection.id)
+    else:
+        form = APIConfigurationForm(instance=connection)
+        
+    context = {
+        'form': form,
+        'connection': connection, # Pass the object for context
+        'form_title': f'Edit API Connection: {connection.name}'
+    }
+    # Reuse the generic form template
+    return render(request, 'admin_ui/prompt_templates/form.html', context)
 
 
 @login_required
@@ -303,3 +374,117 @@ def system_config(request):
     }
     
     return render(request, 'admin_ui/system_config/index.html', context)
+
+
+@login_required
+def system_config_create(request):
+    """Create a new system configuration"""
+    if request.method == 'POST':
+        form = SystemConfigForm(request.POST)
+        if form.is_valid():
+            config = form.save()
+            django_messages.success(request, f"System configuration '{config.key}' created successfully.")
+            return redirect('admin_ui:system_config')
+    else:
+        form = SystemConfigForm()
+    
+    context = {
+        'form': form,
+        'form_title': 'Create New System Configuration'
+    }
+    # Reuse the generic form template
+    return render(request, 'admin_ui/prompt_templates/form.html', context)
+
+
+@login_required
+def system_config_edit(request, config_id):
+    """Edit an existing system configuration"""
+    config = get_object_or_404(SystemConfig, id=config_id)
+    
+    if request.method == 'POST':
+        form = SystemConfigForm(request.POST, instance=config)
+        if form.is_valid():
+            form.save()
+            django_messages.success(request, f"System configuration '{config.key}' updated successfully.")
+            return redirect('admin_ui:system_config') # Redirect back to the list view
+    else:
+        form = SystemConfigForm(instance=config)
+        
+    context = {
+        'form': form,
+        'config': config, # Pass the object for context
+        'form_title': f'Edit System Configuration: {config.key}'
+    }
+    # Reuse the generic form template
+    return render(request, 'admin_ui/prompt_templates/form.html', context)
+
+
+@login_required
+def ai_model_configs(request):
+    """List all AI model configurations"""
+    configs = AIModelConfiguration.objects.all()
+    
+    context = {
+        'configs': configs,
+    }
+    
+    return render(request, 'admin_ui/ai_model_configs/index.html', context)
+
+
+@login_required
+def ai_model_config_detail(request, config_id):
+    """Detail view for an AI model configuration"""
+    config = get_object_or_404(AIModelConfiguration, id=config_id)
+    
+    # Get prompt templates using this configuration
+    templates = PromptTemplate.objects.filter(ai_model_config=config)
+    
+    context = {
+        'config': config,
+        'templates': templates,
+    }
+    
+    return render(request, 'admin_ui/ai_model_configs/detail.html', context)
+
+
+@login_required
+def ai_model_config_create(request):
+    """Create a new AI model configuration"""
+    if request.method == 'POST':
+        form = AIModelConfigurationForm(request.POST)
+        if form.is_valid():
+            config = form.save()
+            django_messages.success(request, f"AI model configuration '{config.name}' created successfully.")
+            return redirect('admin_ui:ai_model_config_detail', config_id=config.id)
+    else:
+        form = AIModelConfigurationForm()
+    
+    context = {
+        'form': form,
+        'form_title': 'Create New AI Model Configuration'
+    }
+    # Reuse the generic form template
+    return render(request, 'admin_ui/prompt_templates/form.html', context)
+
+
+@login_required
+def ai_model_config_edit(request, config_id):
+    """Edit an existing AI model configuration"""
+    config = get_object_or_404(AIModelConfiguration, id=config_id)
+    
+    if request.method == 'POST':
+        form = AIModelConfigurationForm(request.POST, instance=config)
+        if form.is_valid():
+            form.save()
+            django_messages.success(request, f"AI model configuration '{config.name}' updated successfully.")
+            return redirect('admin_ui:ai_model_config_detail', config_id=config.id)
+    else:
+        form = AIModelConfigurationForm(instance=config)
+        
+    context = {
+        'form': form,
+        'config': config, # Pass the object for context
+        'form_title': f'Edit AI Model Configuration: {config.name}'
+    }
+    # Reuse the generic form template
+    return render(request, 'admin_ui/prompt_templates/form.html', context)
