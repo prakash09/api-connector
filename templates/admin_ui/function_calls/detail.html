@@ -1,0 +1,64 @@
+{% extends "admin_ui/base.html" %}
+
+{% block title %}Function Call {{ call.id }} - Django API Hub{% endblock %}
+
+{% block header %}Function Call {{ call.id }}{% endblock %}
+
+{% block header_actions %}
+<a href="{% url 'admin_ui:function_calls' %}" class="btn-secondary mr-2">Back to List</a>
+<a href="#" class="btn-primary">Retry Call</a>
+{% endblock %}
+
+{% block content %}
+<div class="form-section">
+    <h2 class="form-section-title">Function Call Details</h2>
+    <div class="form-grid">
+        <div>
+            <label class="label">ID</label>
+            <p class="mt-1 text-sm text-gray-900">{{ call.id }}</p>
+        </div>
+        <div>
+            <label class="label">Message</label>
+            <p class="mt-1 text-sm text-gray-900">
+                <a href="{% url 'admin_ui:message_detail' call.message.id %}" class="text-blue-600 hover:text-blue-900">{{ call.message.id }}</a>
+            </p>
+        </div>
+        <div>
+            <label class="label">Function Name</label>
+            <p class="mt-1 text-sm text-gray-900">{{ call.function_name }}</p>
+        </div>
+        <div>
+            <label class="label">Status</label>
+            <p class="mt-1 text-sm text-gray-900">
+                {% if call.status == 'pending' %}
+                    <span class="badge badge-info">Pending</span>
+                {% elif call.status == 'success' %}
+                    <span class="badge badge-success">Success</span>
+                {% elif call.status == 'failed' %}
+                    <span class="badge badge-error">Failed</span>
+                {% endif %}
+            </p>
+        </div>
+        <div>
+            <label class="label">Created At</label>
+            <p class="mt-1 text-sm text-gray-900">{{ call.created_at|date:"M d, Y H:i:s" }}</p>
+        </div>
+        <div>
+            <label class="label">Completed At</label>
+            <p class="mt-1 text-sm text-gray-900">{{ call.completed_at|date:"M d, Y H:i:s"|default:"N/A" }}</p>
+        </div>
+    </div>
+    <div class="mt-4">
+        <label class="label">Arguments</label>
+        <pre class="code-block">{{ call.arguments|pprint }}</pre> {# Assuming you have a pprint template filter #}
+    </div>
+    <div class="mt-4">
+        <label class="label">Result</label>
+        <pre class="code-block">{{ call.result|pprint }}</pre> {# Assuming you have a pprint template filter #}
+    </div>
+    <div class="mt-4">
+        <label class="label">Error Message</label>
+        <p class="mt-1 text-sm text-red-600">{{ call.error_message|default:"N/A" }}</p>
+    </div>
+</div>
+{% endblock %}

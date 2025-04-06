@@ -1,0 +1,196 @@
+{% extends "admin_ui/base.html" %}
+
+{% block title %}System Status - Django API Hub{% endblock %}
+
+{% block header %}System Status{% endblock %}
+
+{% block header_actions %}
+<a href="{% url 'admin_ui:dashboard' %}" class="btn-secondary">
+    <svg class="h-5 w-5 mr-2 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+    </svg>
+    Back to Dashboard
+</a>
+{% endblock %}
+
+{% block content %}
+<!-- System Health -->
+<div class="mb-8">
+    <h2 class="text-lg font-medium text-gray-900 mb-4">System Health</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Database Status -->
+        <div class="dashboard-card dashboard-card-primary">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="stat-label">Database</p>
+                    <p class="stat-value flex items-center">
+                        <span class="status-indicator status-active"></span>
+                        <span>Connected</span>
+                    </p>
+                </div>
+                <div class="rounded-full bg-blue-100 p-3">
+                    <svg class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Redis Status -->
+        <div class="dashboard-card dashboard-card-primary">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="stat-label">Redis</p>
+                    <p class="stat-value flex items-center">
+                        <span class="status-indicator status-active"></span>
+                        <span>Connected</span>
+                    </p>
+                </div>
+                <div class="rounded-full bg-blue-100 p-3">
+                    <svg class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Celery Status -->
+        <div class="dashboard-card dashboard-card-primary">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="stat-label">Celery</p>
+                    <p class="stat-value flex items-center">
+                        <span class="status-indicator status-active"></span>
+                        <span>Running</span>
+                    </p>
+                </div>
+                <div class="rounded-full bg-blue-100 p-3">
+                    <svg class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        
+        <!-- OpenAI Status -->
+        <div class="dashboard-card dashboard-card-primary">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="stat-label">OpenAI</p>
+                    <p class="stat-value flex items-center">
+                        <span class="status-indicator status-active"></span>
+                        <span>Connected</span>
+                    </p>
+                </div>
+                <div class="rounded-full bg-blue-100 p-3">
+                    <svg class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- System Configuration -->
+<div class="mb-8">
+    <h2 class="text-lg font-medium text-gray-900 mb-4">System Configuration</h2>
+    <div class="table-container">
+        <table class="table">
+            <thead class="table-header">
+                <tr>
+                    <th class="table-header-cell">Key</th>
+                    <th class="table-header-cell">Value</th>
+                    <th class="table-header-cell">Description</th>
+                    <th class="table-header-cell">Last Updated</th>
+                </tr>
+            </thead>
+            <tbody class="table-body">
+                {% for config in system_configs %}
+                <tr class="table-row">
+                    <td class="table-cell font-medium text-gray-900">{{ config.key }}</td>
+                    <td class="table-cell">
+                        <pre class="text-xs bg-gray-100 p-2 rounded">{{ config.value|pprint }}</pre>
+                    </td>
+                    <td class="table-cell">{{ config.description }}</td>
+                    <td class="table-cell">{{ config.updated_at|date:"M d, Y H:i" }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4" class="px-6 py-4 text-center text-gray-500">No system configurations found</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Message Statistics -->
+<div class="mb-8">
+    <h2 class="text-lg font-medium text-gray-900 mb-4">Message Statistics</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Message Status -->
+        <div class="card">
+            <h3 class="text-base font-medium text-gray-900 mb-4">Message Status</h3>
+            <div class="space-y-4">
+                {% for status in message_counts %}
+                <div class="flex items-center">
+                    <div class="w-32 text-sm text-gray-500">{{ status.status|title }}</div>
+                    <div class="flex-1">
+                        <div class="h-4 bg-gray-200 rounded-full overflow-hidden">
+                            <div class="h-full {% if status.status == 'processed' %}bg-green-500{% elif status.status == 'failed' %}bg-red-500{% elif status.status == 'processing' %}bg-yellow-500{% else %}bg-blue-500{% endif %}" style="width: {{ status.count }}%"></div>
+                        </div>
+                    </div>
+                    <div class="w-16 text-right text-sm text-gray-500">{{ status.count }}</div>
+                </div>
+                {% empty %}
+                <p class="text-gray-500">No message data available</p>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <!-- Error Levels -->
+        <div class="card">
+            <h3 class="text-base font-medium text-gray-900 mb-4">Error Levels</h3>
+            <div class="space-y-4">
+                {% for error in error_counts %}
+                <div class="flex items-center">
+                    <div class="w-32 text-sm text-gray-500">{{ error.level|title }}</div>
+                    <div class="flex-1">
+                        <div class="h-4 bg-gray-200 rounded-full overflow-hidden">
+                            <div class="h-full {% if error.level == 'info' %}bg-blue-500{% elif error.level == 'warning' %}bg-yellow-500{% elif error.level == 'error' %}bg-red-500{% elif error.level == 'critical' %}bg-purple-500{% endif %}" style="width: {{ error.count }}%"></div>
+                        </div>
+                    </div>
+                    <div class="w-16 text-right text-sm text-gray-500">{{ error.count }}</div>
+                </div>
+                {% empty %}
+                <p class="text-gray-500">No error data available</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- API Endpoint Statistics -->
+<div>
+    <h2 class="text-lg font-medium text-gray-900 mb-4">API Endpoint Statistics</h2>
+    <div class="card">
+        <h3 class="text-base font-medium text-gray-900 mb-4">Endpoints by API</h3>
+        <div class="space-y-4">
+            {% for endpoint in api_endpoint_counts %}
+            <div class="flex items-center">
+                <div class="w-48 text-sm text-gray-500">{{ endpoint.api_config__name }}</div>
+                <div class="flex-1">
+                    <div class="h-4 bg-gray-200 rounded-full overflow-hidden">
+                        <div class="h-full bg-green-500" style="width: {{ endpoint.count }}%"></div>
+                    </div>
+                </div>
+                <div class="w-16 text-right text-sm text-gray-500">{{ endpoint.count }}</div>
+            </div>
+            {% empty %}
+            <p class="text-gray-500">No API endpoint data available</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

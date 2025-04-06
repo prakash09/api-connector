@@ -1,0 +1,50 @@
+{% extends "admin_ui/base.html" %}
+
+{% block title %}Function Calls - Django API Hub{% endblock %}
+
+{% block header %}Function Calls{% endblock %}
+
+{% block content %}
+<div class="table-container">
+    <table class="table">
+        <thead class="table-header">
+            <tr>
+                <th class="table-header-cell">ID</th>
+                <th class="table-header-cell">Message</th>
+                <th class="table-header-cell">Function</th>
+                <th class="table-header-cell">Status</th>
+                <th class="table-header-cell">Created</th>
+                <th class="table-header-cell">Actions</th>
+            </tr>
+        </thead>
+        <tbody class="table-body">
+            {% for call in function_calls %}
+            <tr class="table-row">
+                <td class="table-cell font-medium text-gray-900">{{ call.id }}</td>
+                <td class="table-cell">
+                    <a href="{% url 'admin_ui:message_detail' call.message.id %}" class="text-blue-600 hover:text-blue-900">{{ call.message.id }}</a>
+                </td>
+                <td class="table-cell">{{ call.function_name }}</td>
+                <td class="table-cell">
+                    {% if call.status == 'pending' %}
+                        <span class="badge badge-info">Pending</span>
+                    {% elif call.status == 'success' %}
+                        <span class="badge badge-success">Success</span>
+                    {% elif call.status == 'failed' %}
+                        <span class="badge badge-error">Failed</span>
+                    {% endif %}
+                </td>
+                <td class="table-cell">{{ call.created_at|date:"M d, Y H:i:s" }}</td>
+                <td class="table-cell">
+                    <a href="{% url 'admin_ui:function_call_detail' call.id %}" class="text-blue-600 hover:text-blue-900">View</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6" class="px-6 py-4 text-center text-gray-500">No function calls found</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

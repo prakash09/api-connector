@@ -1,0 +1,54 @@
+{% extends "admin_ui/base.html" %}
+
+{% block title %}Message Sources - Django API Hub{% endblock %}
+
+{% block header %}Message Sources{% endblock %}
+
+{% block header_actions %}
+<a href="{% url 'admin_ui:message_source_create' %}" class="btn-primary">
+    <svg class="h-5 w-5 mr-2 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+    </svg>
+    Add Message Source
+</a>
+{% endblock %}
+
+{% block content %}
+<div class="table-container">
+    <table class="table">
+        <thead class="table-header">
+            <tr>
+                <th class="table-header-cell">Name</th>
+                <th class="table-header-cell">Type</th>
+                <th class="table-header-cell">Status</th>
+                <th class="table-header-cell">Created</th>
+                <th class="table-header-cell">Actions</th>
+            </tr>
+        </thead>
+        <tbody class="table-body">
+            {% for source in sources %}
+            <tr class="table-row">
+                <td class="table-cell font-medium text-gray-900">{{ source.name }}</td>
+                <td class="table-cell">{{ source.source_type }}</td>
+                <td class="table-cell">
+                    {% if source.is_active %}
+                        <span class="badge badge-success">Active</span>
+                    {% else %}
+                        <span class="badge bg-gray-100 text-gray-800">Inactive</span>
+                    {% endif %}
+                </td>
+                <td class="table-cell">{{ source.created_at|date:"M d, Y H:i" }}</td>
+                <td class="table-cell">
+                    <a href="{% url 'admin_ui:message_source_detail' source.id %}" class="text-blue-600 hover:text-blue-900 mr-4">View</a>
+                    <a href="#" class="text-red-600 hover:text-red-900">Delete</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5" class="px-6 py-4 text-center text-gray-500">No message sources found</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

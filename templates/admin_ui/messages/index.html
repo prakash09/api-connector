@@ -1,0 +1,50 @@
+{% extends "admin_ui/base.html" %}
+
+{% block title %}Messages - Django API Hub{% endblock %}
+
+{% block header %}Messages{% endblock %}
+
+{% block content %}
+<div class="table-container">
+    <table class="table">
+        <thead class="table-header">
+            <tr>
+                <th class="table-header-cell">ID</th>
+                <th class="table-header-cell">Source</th>
+                <th class="table-header-cell">Status</th>
+                <th class="table-header-cell">Received</th>
+                <th class="table-header-cell">Actions</th>
+            </tr>
+        </thead>
+        <tbody class="table-body">
+            {% for message in messages %}
+            <tr class="table-row">
+                <td class="table-cell font-medium text-gray-900">{{ message.id }}</td>
+                <td class="table-cell">{{ message.source.name }}</td>
+                <td class="table-cell">
+                    {% if message.status == 'received' %}
+                        <span class="badge badge-info">Received</span>
+                    {% elif message.status == 'processing' %}
+                        <span class="badge badge-warning">Processing</span>
+                    {% elif message.status == 'processed' %}
+                        <span class="badge badge-success">Processed</span>
+                    {% elif message.status == 'failed' %}
+                        <span class="badge badge-error">Failed</span>
+                    {% elif message.status == 'ignored' %}
+                        <span class="badge bg-gray-100 text-gray-800">Ignored</span>
+                    {% endif %}
+                </td>
+                <td class="table-cell">{{ message.received_at|date:"M d, Y H:i" }}</td>
+                <td class="table-cell">
+                    <a href="{% url 'admin_ui:message_detail' message.id %}" class="text-blue-600 hover:text-blue-900">View</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5" class="px-6 py-4 text-center text-gray-500">No messages found</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

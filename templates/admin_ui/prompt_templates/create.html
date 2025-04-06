@@ -1,0 +1,20 @@
+{% extends "admin_ui/base.html" %}
+
+{% block title %}Create Prompt Template - Django API Hub{% endblock %}
+
+{% block header %}Create Prompt Template{% endblock %}
+
+{% block header_actions %}
+<a href="{% url 'admin_ui:prompt_templates' %}" class="btn-secondary">Cancel</a>
+{% endblock %}
+
+{% block content %}
+<div class="form-section">
+    <h2 class="form-section-title">New Prompt Template</h2>
+    <p class="text-gray-500">This is a placeholder for the prompt template creation form.</p>
+    {# Add form fields here in a real implementation #}
+    <div class="mt-6">
+        <button type="submit" class="btn-primary">Save Template</button>
+    </div>
+</div>
+{% endblock %}

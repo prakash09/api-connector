@@ -1,0 +1,42 @@
+{% extends "admin_ui/base.html" %}
+
+{% block title %}{{ template.name }} - Prompt Template{% endblock %}
+
+{% block header %}{{ template.name }}{% endblock %}
+
+{% block header_actions %}
+<a href="{% url 'admin_ui:prompt_templates' %}" class="btn-secondary mr-2">Back to List</a>
+<a href="#" class="btn-primary">Edit Template</a>
+{% endblock %}
+
+{% block content %}
+<div class="form-section">
+    <h2 class="form-section-title">Template Details</h2>
+    <div class="form-grid">
+        <div>
+            <label class="label">Name</label>
+            <p class="mt-1 text-sm text-gray-900">{{ template.name }}</p>
+        </div>
+        <div>
+            <label class="label">Created At</label>
+            <p class="mt-1 text-sm text-gray-900">{{ template.created_at|date:"M d, Y H:i" }}</p>
+        </div>
+    </div>
+    <div class="mt-4">
+        <label class="label">Description</label>
+        <p class="mt-1 text-sm text-gray-900">{{ template.description }}</p>
+    </div>
+    <div class="mt-4">
+        <label class="label">System Prompt</label>
+        <pre class="code-block">{{ template.system_prompt }}</pre>
+    </div>
+    <div class="mt-4">
+        <label class="label">User Prompt Template</label>
+        <pre class="code-block">{{ template.user_prompt_template }}</pre>
+    </div>
+    <div class="mt-4">
+        <label class="label">Functions</label>
+        <pre class="code-block">{{ template.functions|pprint }}</pre> {# Assuming you have a pprint template filter #}
+    </div>
+</div>
+{% endblock %}

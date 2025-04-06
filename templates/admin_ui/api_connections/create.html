@@ -1,0 +1,20 @@
+{% extends "admin_ui/base.html" %}
+
+{% block title %}Create API Connection - Django API Hub{% endblock %}
+
+{% block header %}Create API Connection{% endblock %}
+
+{% block header_actions %}
+<a href="{% url 'admin_ui:api_connections' %}" class="btn-secondary">Cancel</a>
+{% endblock %}
+
+{% block content %}
+<div class="form-section">
+    <h2 class="form-section-title">New API Connection</h2>
+    <p class="text-gray-500">This is a placeholder for the API connection creation form.</p>
+    {# Add form fields here in a real implementation #}
+    <div class="mt-6">
+        <button type="submit" class="btn-primary">Save Connection</button>
+    </div>
+</div>
+{% endblock %}

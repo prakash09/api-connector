@@ -1,0 +1,46 @@
+{% extends "admin_ui/base.html" %}
+
+{% block title %}Prompt Templates - Django API Hub{% endblock %}
+
+{% block header %}Prompt Templates{% endblock %}
+
+{% block header_actions %}
+<a href="{% url 'admin_ui:prompt_template_create' %}" class="btn-primary">
+    <svg class="h-5 w-5 mr-2 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+    </svg>
+    Add Prompt Template
+</a>
+{% endblock %}
+
+{% block content %}
+<div class="table-container">
+    <table class="table">
+        <thead class="table-header">
+            <tr>
+                <th class="table-header-cell">Name</th>
+                <th class="table-header-cell">Description</th>
+                <th class="table-header-cell">Created</th>
+                <th class="table-header-cell">Actions</th>
+            </tr>
+        </thead>
+        <tbody class="table-body">
+            {% for template in templates %}
+            <tr class="table-row">
+                <td class="table-cell font-medium text-gray-900">{{ template.name }}</td>
+                <td class="table-cell">{{ template.description|truncatechars:50 }}</td>
+                <td class="table-cell">{{ template.created_at|date:"M d, Y H:i" }}</td>
+                <td class="table-cell">
+                    <a href="{% url 'admin_ui:prompt_template_detail' template.id %}" class="text-blue-600 hover:text-blue-900 mr-4">View</a>
+                    <a href="#" class="text-red-600 hover:text-red-900">Delete</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4" class="px-6 py-4 text-center text-gray-500">No prompt templates found</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

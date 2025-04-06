@@ -1,0 +1,50 @@
+{% extends "admin_ui/base.html" %}
+
+{% block title %}Error Logs - Django API Hub{% endblock %}
+
+{% block header %}Error Logs{% endblock %}
+
+{% block content %}
+<div class="table-container">
+    <table class="table">
+        <thead class="table-header">
+            <tr>
+                <th class="table-header-cell">Timestamp</th>
+                <th class="table-header-cell">Level</th>
+                <th class="table-header-cell">Source</th>
+                <th class="table-header-cell">Message</th>
+                <th class="table-header-cell">Actions</th>
+            </tr>
+        </thead>
+        <tbody class="table-body">
+            {% for log in logs %}
+            <tr class="table-row">
+                <td class="table-cell">{{ log.created_at|date:"M d, Y H:i:s" }}</td>
+                <td class="table-cell">
+                    {% if log.level == 'critical' %}
+                        <span class="badge badge-error">Critical</span>
+                    {% elif log.level == 'error' %}
+                        <span class="badge badge-error">Error</span>
+                    {% elif log.level == 'warning' %}
+                        <span class="badge badge-warning">Warning</span>
+                    {% elif log.level == 'info' %}
+                        <span class="badge badge-info">Info</span>
+                    {% else %}
+                        <span class="badge bg-gray-100 text-gray-800">{{ log.level|title }}</span>
+                    {% endif %}
+                </td>
+                <td class="table-cell">{{ log.source }}</td>
+                <td class="table-cell font-mono text-xs">{{ log.message|truncatechars:100 }}</td>
+                <td class="table-cell">
+                    <a href="{% url 'admin_ui:error_log_detail' log.id %}" class="text-blue-600 hover:text-blue-900">View</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5" class="px-6 py-4 text-center text-gray-500">No error logs found</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

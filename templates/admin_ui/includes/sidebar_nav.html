@@ -1,0 +1,72 @@
+<!-- Dashboard -->
+<a href="{% url 'admin_ui:dashboard' %}" class="{% if request.resolver_match.url_name == 'dashboard' %}sidebar-link-active{% else %}sidebar-link{% endif %}">
+    <svg class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+    </svg>
+    <span>Dashboard</span>
+</a>
+
+<!-- Message Sources -->
+<a href="{% url 'admin_ui:message_sources' %}" class="{% if request.resolver_match.url_name == 'message_sources' or request.resolver_match.url_name == 'message_source_detail' %}sidebar-link-active{% else %}sidebar-link{% endif %}">
+    <svg class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+    </svg>
+    <span>Message Sources</span>
+</a>
+
+<!-- API Connections -->
+<a href="{% url 'admin_ui:api_connections' %}" class="{% if request.resolver_match.url_name == 'api_connections' or request.resolver_match.url_name == 'api_connection_detail' %}sidebar-link-active{% else %}sidebar-link{% endif %}">
+    <svg class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+    </svg>
+    <span>API Connections</span>
+</a>
+
+<!-- Prompt Templates -->
+<a href="{% url 'admin_ui:prompt_templates' %}" class="{% if request.resolver_match.url_name == 'prompt_templates' or request.resolver_match.url_name == 'prompt_template_detail' %}sidebar-link-active{% else %}sidebar-link{% endif %}">
+    <svg class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+    </svg>
+    <span>Prompt Templates</span>
+</a>
+
+<!-- Messages -->
+<a href="{% url 'admin_ui:messages' %}" class="{% if request.resolver_match.url_name == 'messages' or request.resolver_match.url_name == 'message_detail' %}sidebar-link-active{% else %}sidebar-link{% endif %}">
+    <svg class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+    </svg>
+    <span>Messages</span>
+</a>
+
+<!-- Function Calls -->
+<a href="{% url 'admin_ui:function_calls' %}" class="{% if request.resolver_match.url_name == 'function_calls' or request.resolver_match.url_name == 'function_call_detail' %}sidebar-link-active{% else %}sidebar-link{% endif %}">
+    <svg class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+    </svg>
+    <span>Function Calls</span>
+</a>
+
+<!-- System Config -->
+<a href="{% url 'admin_ui:system_config' %}" class="{% if request.resolver_match.url_name == 'system_config' %}sidebar-link-active{% else %}sidebar-link{% endif %}">
+    <svg class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+    </svg>
+    <span>System Config</span>
+</a>
+
+<!-- Error Logs -->
+<a href="{% url 'admin_ui:error_logs' %}" class="{% if request.resolver_match.url_name == 'error_logs' or request.resolver_match.url_name == 'error_log_detail' %}sidebar-link-active{% else %}sidebar-link{% endif %}">
+    <svg class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+    </svg>
+    <span>Error Logs</span>
+</a>
+
+<!-- Django Admin -->
+<a href="{% url 'admin:index' %}" class="sidebar-link" target="_blank">
+    <svg class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+    </svg>
+    <span>Django Admin</span>
+</a>

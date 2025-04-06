@@ -1,0 +1,78 @@
+{% extends "admin_ui/base.html" %}
+
+{% block title %}{{ connection.name }} - API Connection{% endblock %}
+
+{% block header %}{{ connection.name }}{% endblock %}
+
+{% block header_actions %}
+<a href="{% url 'admin_ui:api_connections' %}" class="btn-secondary mr-2">Back to List</a>
+<a href="#" class="btn-primary">Edit Connection</a>
+{% endblock %}
+
+{% block content %}
+<div class="form-section">
+    <h2 class="form-section-title">Connection Details</h2>
+    <div class="form-grid">
+        <div>
+            <label class="label">Name</label>
+            <p class="mt-1 text-sm text-gray-900">{{ connection.name }}</p>
+        </div>
+        <div>
+            <label class="label">Base URL</label>
+            <p class="mt-1 text-sm text-gray-900">{{ connection.base_url }}</p>
+        </div>
+        <div>
+            <label class="label">Authentication Type</label>
+            <p class="mt-1 text-sm text-gray-900">{{ connection.auth_type }}</p>
+        </div>
+        <div>
+            <label class="label">Created At</label>
+            <p class="mt-1 text-sm text-gray-900">{{ connection.created_at|date:"M d, Y H:i" }}</p>
+        </div>
+    </div>
+    <div class="mt-4">
+        <label class="label">Authentication Config</label>
+        <pre class="code-block">{{ connection.auth_config|pprint }}</pre> {# Assuming you have a pprint template filter #}
+    </div>
+    <div class="mt-4">
+        <label class="label">Headers</label>
+        <pre class="code-block">{{ connection.headers|pprint }}</pre> {# Assuming you have a pprint template filter #}
+    </div>
+</div>
+
+<div class="mt-8">
+    <h2 class="text-lg font-medium text-gray-900 mb-4">Endpoints</h2>
+    <div class="table-container">
+        <table class="table">
+            <thead class="table-header">
+                <tr>
+                    <th class="table-header-cell">Name</th>
+                    <th class="table-header-cell">Path</th>
+                    <th class="table-header-cell">Method</th>
+                    <th class="table-header-cell">Actions</th>
+                </tr>
+            </thead>
+            <tbody class="table-body">
+                {% for endpoint in endpoints %}
+                <tr class="table-row">
+                    <td class="table-cell font-medium text-gray-900">{{ endpoint.name }}</td>
+                    <td class="table-cell">{{ endpoint.path }}</td>
+                    <td class="table-cell">{{ endpoint.method }}</td>
+                    <td class="table-cell">
+                        <a href="#" class="text-blue-600 hover:text-blue-900 mr-4">View</a>
+                        <a href="#" class="text-red-600 hover:text-red-900">Delete</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4" class="px-6 py-4 text-center text-gray-500">No endpoints found for this connection</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="mt-4">
+        <a href="#" class="btn-secondary">Add Endpoint</a>
+    </div>
+</div>
+{% endblock %}

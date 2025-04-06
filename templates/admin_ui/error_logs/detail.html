@@ -1,0 +1,53 @@
+{% extends "admin_ui/base.html" %}
+
+{% block title %}Error Log {{ log.id }} - Django API Hub{% endblock %}
+
+{% block header %}Error Log {{ log.id }}{% endblock %}
+
+{% block header_actions %}
+<a href="{% url 'admin_ui:error_logs' %}" class="btn-secondary">Back to List</a>
+{% endblock %}
+
+{% block content %}
+<div class="form-section">
+    <h2 class="form-section-title">Error Details</h2>
+    <div class="form-grid">
+        <div>
+            <label class="label">ID</label>
+            <p class="mt-1 text-sm text-gray-900">{{ log.id }}</p>
+        </div>
+        <div>
+            <label class="label">Timestamp</label>
+            <p class="mt-1 text-sm text-gray-900">{{ log.created_at|date:"M d, Y H:i:s" }}</p>
+        </div>
+        <div>
+            <label class="label">Level</label>
+            <p class="mt-1 text-sm text-gray-900">
+                {% if log.level == 'critical' %}
+                    <span class="badge badge-error">Critical</span>
+                {% elif log.level == 'error' %}
+                    <span class="badge badge-error">Error</span>
+                {% elif log.level == 'warning' %}
+                    <span class="badge badge-warning">Warning</span>
+                {% elif log.level == 'info' %}
+                    <span class="badge badge-info">Info</span>
+                {% else %}
+                    <span class="badge bg-gray-100 text-gray-800">{{ log.level|title }}</span>
+                {% endif %}
+            </p>
+        </div>
+        <div>
+            <label class="label">Source</label>
+            <p class="mt-1 text-sm text-gray-900">{{ log.source }}</p>
+        </div>
+    </div>
+    <div class="mt-4">
+        <label class="label">Message</label>
+        <p class="mt-1 text-sm text-gray-900">{{ log.message }}</p>
+    </div>
+    <div class="mt-4">
+        <label class="label">Traceback</label>
+        <pre class="code-block">{{ log.traceback|default:"N/A" }}</pre>
+    </div>
+</div>
+{% endblock %}
